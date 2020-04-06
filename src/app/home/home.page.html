@@ -1,9 +1,9 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <!--ion-toolbar>
     <ion-title>
       Blank
     </ion-title>
-  </ion-toolbar>
+  </ion-toolbar-->
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -13,8 +13,29 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  
+
+<ion-grid>
+  <ion-row class="ion-align-items-start">
+    <ion-col size-md='6'>
+      <ion-item lines='none'>
+        <ion-label>Total orders for the sector: 1234</ion-label>
+      </ion-item>
+      <ion-item  lines='none'>
+        <ion-img src="assets/TelAvivAreaMap.PNG"></ion-img>
+      </ion-item>
+    </ion-col>
+    <ion-col size-md='6'>
+      <ion-item lines='none'>
+        <ion-label>ORDERS</ion-label>
+      </ion-item>
+        <app-table></app-table>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+
+
 </ion-content>
