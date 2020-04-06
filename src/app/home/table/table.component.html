@@ -6,7 +6,14 @@
     <th class="tg-ojej">Recomended<br>Order</th>
     <th class="tg-ojej">Robert</th>
   </tr>
-  <tr>
+    <tr *ngFor='let item of orderDetails; let i=index'>
+      <td class="tg-ojej">{{i + 1}}</td>
+      <td class="tg-26ym">{{ item.name }}</td>
+      <td class="tg-gf16" >{{ item.score }}</td>
+      <td class="tg-k9gz"><ion-input type="number" [(ngModel)]="item.amount"></ion-input></td>
+      <td class="tg-gf16"><ion-checkbox [(ngModel)]='item.checked'></ion-checkbox></td>
+    </tr>
+  <!--tr>
     <td class="tg-ojej">1</td>
     <td class="tg-26ym">Swimming</td>
     <td class="tg-gf16">30</td>
@@ -47,5 +54,12 @@
     <td class="tg-gf16">70</td>
     <td class="tg-k9gz"><ion-input type="number" value="500"></ion-input></td>
     <td class="tg-gf16"><ion-checkbox></ion-checkbox></td>
+  </tr-->
+  <tr>
+    <td class="tg-26ym"></td>
+    <td class="tg-26ym">Total</td>
+    <td class="tg-26ym"></td>
+    <td class="tg-k9gz">{{ getTotalOrders() }}</td>
+    <td class="tg-26ym"><ion-button color='success'>Place Order</ion-button></td>
   </tr>
 </table>
